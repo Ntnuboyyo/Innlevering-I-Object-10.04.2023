@@ -1,10 +1,12 @@
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
-public class PleaseProvideControllerClassName {
+public class Control {
 
     @FXML
     private Button NewBook;
@@ -19,13 +21,12 @@ public class PleaseProvideControllerClassName {
     void NewBook(ActionEvent event) {
         Button button = new Button();
         /*
-        button.setOnMouseClicked(event ->  {
-            Button pagebutton = new Button();
-            //pagebutton.
-            
-         });
-        */
-        Book newbook = new Book();
+        button.setOnMouseClicked(
+            e -> {
+                NewBook.getParent().getChildrenUnmodifiable().add(0, button);
+                //NewBook.getParent();
+            });
+            */
     }
 
 }

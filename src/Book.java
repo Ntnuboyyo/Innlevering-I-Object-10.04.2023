@@ -1,11 +1,22 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Book implements PageContainer,Taggable{
+import javafx.scene.paint.Color;
+
+public class Book implements PageContainer,Taggable,Colorable{
     Collection<Tag> tags = new ArrayList<Tag>();
+    private Color color;
     private Collection<Page> pagearray = new ArrayList<Page>();
     public Collection<Page> GetPages(){
         return pagearray;
+    }
+    @Override
+    public void SetColor(Color c){
+        color=c;
+    }
+    @Override
+    public Color GetColor(){
+        return color;
     }
     public Collection<Page> SearchPagesString(String search){
         Collection<Page> positives= new ArrayList<Page>();      //an array to store the positives in the search

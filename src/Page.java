@@ -1,8 +1,11 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javafx.scene.paint.Color;
 
-public class Page implements Taggable {
+
+public class Page implements Taggable,Colorable {
+    private Color color;
     Collection<Tag> tags = new ArrayList<Tag>();
     public static int last_page_id=-1;      //-1 to allow the pid to be used as an index, PID() increments to 0 on first page
     int pid;
@@ -26,5 +29,13 @@ public class Page implements Taggable {
     }
     public void RegisterTag(Tag tag) {
         this.tags.add(tag);
+    }
+    @Override
+    public void SetColor(Color c) {
+        color=c;
+    }
+    @Override
+    public Color GetColor() {
+        return color;
     }
 }
