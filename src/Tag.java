@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 
 public class Tag {
     Collection<Folder> folders = new ArrayList<Folder>();   //folders tagged with this tag
-    Collection<Book> books = new ArrayList<Book>();         //books tagged with this tag
+    ArrayList<Book> books = new ArrayList<Book>();         //books tagged with this tag
     Collection<Page> pages = new ArrayList<Page>();         //pages tagged with this tag
     String taglabel;
     Color color;

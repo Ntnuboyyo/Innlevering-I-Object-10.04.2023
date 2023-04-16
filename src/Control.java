@@ -1,10 +1,8 @@
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 
 public class Control {
 
@@ -19,7 +17,7 @@ public class Control {
 
     @FXML
     void NewBook(ActionEvent event) {
-        Button button = new Button();
+        //Button button = new Button();
         /*
         button.setOnMouseClicked(
             e -> {

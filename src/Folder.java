@@ -3,11 +3,11 @@ import java.util.Collection;
 
 public class Folder implements BookContainer, PageContainer, Taggable{
     Collection<Tag> tags = new ArrayList<Tag>();
-    private Collection<Book> bookarray = new ArrayList<Book>();
+    //private static Collection<Book> bookarray = new ArrayList<Book>();
     @Override
-    public Collection<Page> GetPages() {
-        Collection<Page> pagearray = new ArrayList<Page>();
-        for(Book book : bookarray){
+    public ArrayList<Page> GetPages() {
+        ArrayList<Page> pagearray = new ArrayList<Page>();
+        for(Book book : allbooks){
             for(Page page : book.GetPages()){
                 pagearray.add(page);
             }
@@ -16,9 +16,11 @@ public class Folder implements BookContainer, PageContainer, Taggable{
     }
 
     @Override
-    public Collection<Page> SearchPagesString(String search) {
-        Collection<Page> positives = new ArrayList<Page>();
-        for(Book book : bookarray){
+    public ArrayList<Page> SearchPagesString(String search) {
+        if(search==null){return null;};
+        if(search==""){return null;};
+        ArrayList<Page> positives = new ArrayList<Page>();
+        for(Book book : allbooks){
             for (Page page : book.SearchPagesString(search)){
                 positives.add(page);
             }
@@ -28,14 +30,16 @@ public class Folder implements BookContainer, PageContainer, Taggable{
     }
 
     @Override
-    public Collection<Book> GetBooks() {
-        return bookarray;
+    public ArrayList<Book> GetBooks() {
+        return allbooks;
     }
 
     @Override
-    public Collection<Book> SearchBooksString(String search) {
-        Collection<Book> positives = new ArrayList<Book>();
-        for(Book book : bookarray){
+    public ArrayList<Book> SearchBooksString(String search) {
+        if(search==null){return null;};
+        if(search==""){return null;};
+        ArrayList<Book> positives = new ArrayList<Book>();
+        for(Book book : allbooks){
             for (Page page : book.GetPages()){
                 if (page.GetPage().contains(search)){
                     positives.add(book);
@@ -44,11 +48,21 @@ public class Folder implements BookContainer, PageContainer, Taggable{
         }
         return positives;
     }
-
+    
+    public Book SearchPagesBID(int searchbid) {           //search for pages by tag
+        if(searchbid < 0){return null;};
+        ArrayList<Book> searables = allbooks;
+        for(Book book: searables){
+            if (book.GetBID()==searchbid){
+                return book;
+            }
+        }
+        return null;
+    }
     @Override
     public int PageCount() {
         int pagecount =0;
-        for (Book book:bookarray){
+        for (Book book:allbooks){
             pagecount+=book.PageCount();
         }
         return pagecount;
@@ -57,20 +71,19 @@ public class Folder implements BookContainer, PageContainer, Taggable{
     @Override
     public int WordCount() {
         int wordcount =0;
-        for (Book book:bookarray){
+        for (Book book:allbooks){
             wordcount+=book.WordCount();
         }
         return wordcount;
     }
 
-    @Override
-    public void AddBook(Book book) {
-        bookarray.add(book);
-    }
 
+    static void AddBook(Book book){
+        allbooks.add(book);
+    };
     @Override
     public void RemoveBook(Book book) {
-        bookarray.remove(book);
+        allbooks.remove(book);
     }
 
     @Override
@@ -80,10 +93,12 @@ public class Folder implements BookContainer, PageContainer, Taggable{
 
     @Override
     public Collection<Page> SearchPagesTag(Tag tag) {
+        if(tag==null){return null;};
         return tag.pages;
     }
     @Override
-    public Collection<Book> SearchBooksTag(Tag tag) {
+    public ArrayList<Book> SearchBooksTag(Tag tag) {
+        if(tag==null){return null;};
         return tag.books;
     }
     

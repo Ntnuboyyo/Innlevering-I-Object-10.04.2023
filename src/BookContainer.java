@@ -1,11 +1,14 @@
-import java.util.Collection;
+import java.util.ArrayList;
 
 public interface BookContainer {
-    Collection<Book> GetBooks();
-    Collection<Book> SearchBooksString(String search);
-    Collection<Book> SearchBooksTag(Tag tag);
+    static ArrayList<Book> allbooks = new ArrayList<Book>();
+    ArrayList<Book> GetBooks();
+    ArrayList<Book> SearchBooksString(String search);
+    ArrayList<Book> SearchBooksTag(Tag tag);
     int PageCount();
     int WordCount();
-    void AddBook(Book book);
+    static void AddBook(Book book){
+        allbooks.add(book);
+    };
     void RemoveBook(Book book);
 }
