@@ -5,12 +5,8 @@ import javafx.scene.paint.Color;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 
-import javax.crypto.Cipher;
-
-public class BookContainerTest {
+public class JUnitTests {
 
     @Test
     public void testDeclarationOfClasses() {
