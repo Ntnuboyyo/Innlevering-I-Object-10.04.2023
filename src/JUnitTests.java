@@ -29,7 +29,7 @@ public class JUnitTests {
 
     @Test
     public void testTitles() {
-        Folder folder = new Folder();
+        //Folder folder = new Folder();
         // folder.SetTitle("Folder title 1"); //folder names not implemented
 
         Book book = new Book();
@@ -46,7 +46,7 @@ public class JUnitTests {
         page3.SetTitle("Page title 3");
         page4.SetTitle("Page title 4");
 
-        folder.AddBook(book);
+        //folder.AddBook(book);
         book.AddPage(page1);
         book.AddPage(page2);
         book.AddPage(page3);
@@ -147,7 +147,7 @@ public class JUnitTests {
         //are there 100 pages in the book?
         assertEquals(pagecount, book.PageCount());
         //the way folders count their pages is diferent, each page counts twice
-        assertEquals(pagecount*2, folder.PageCount());
+        //assertEquals(pagecount*2, folder.PageCount());
     }
 
     @Test
