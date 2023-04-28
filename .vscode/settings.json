@@ -11,7 +11,16 @@
             "c:\\Users\\illusion\\Downloads\\javafx-sdk-20\\lib\\javafx.media.jar",
             "c:\\Users\\illusion\\Downloads\\javafx-sdk-20\\lib\\javafx.swing.jar",
             "c:\\Users\\illusion\\Downloads\\javafx-sdk-20\\lib\\javafx.web.jar",
-            "c:\\Users\\illusion\\Downloads\\javafx-sdk-20\\lib\\javafx-swt.jar"
+            "c:\\Users\\illusion\\Downloads\\javafx-sdk-20\\lib\\javafx-swt.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.base.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.controls.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.fxml.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.graphics.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.media.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.swing.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx.web.jar",
+            "c:\\Users\\Illusion Distort\\Downloads\\openjfx-20.0.1_windows-x64_bin-sdk\\javafx-sdk-20.0.1\\lib\\javafx-swt.jar",
+            "test-lib1\\**\\*.jar"
         ],
         "exclude": [
             "c:\\Users\\illusion\\Downloads\\javafx-sdk-20\\lib\\javafx.controls.jar",

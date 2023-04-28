@@ -34,7 +34,7 @@ public class Page implements Taggable,Colorable {
         return page.length();               //the number of characters on the page
     }
     public int GetWordCount(){
-        return page.split(page).length;     //the length of the list of words
+        return page.split(" ").length;     //the length of the list of words
     }
     private int PID(){                      //assigning an integer to each page, might use for search functionality?
         last_page_id++;
